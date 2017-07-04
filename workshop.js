@@ -25,17 +25,16 @@ function map(mappingFunction, theArray) {
 
 function filter(predicate, theArray) {
   var filteredArray = [];
-  for (var i = 0; i < theArray.length; i ++) {
-    if (theArray[i] % 2 === 1 ) {
-      filteredArray.push(theArray[i]);
+  theArray.forEach(function(element) {
+    if (predicate(element)) {
+      filteredArray.push(element);
     }
-  }
+  })
   return filteredArray;
-  
 }
 
 function every(predicate, theArray) {
-
+  
 }
 
 function some(predicate, theArray) {
