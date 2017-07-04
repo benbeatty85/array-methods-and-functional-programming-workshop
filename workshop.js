@@ -14,6 +14,12 @@ function forEach(callback, theArray) {
 }
 
 function map(mappingFunction, theArray) {
+  var newArray = [];
+  theArray.forEach(function(object) {
+    var newObject = mappingFunction(object);
+    newArray.push(newObject);
+  })
+  return newArray;
 
 }
 
