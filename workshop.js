@@ -24,7 +24,14 @@ function map(mappingFunction, theArray) {
 }
 
 function filter(predicate, theArray) {
-
+  var filteredArray = [];
+  for (var i = 0; i < theArray.length; i ++) {
+    if (theArray[i] % 2 === 1 ) {
+      filteredArray.push(theArray[i]);
+    }
+  }
+  return filteredArray;
+  
 }
 
 function every(predicate, theArray) {
