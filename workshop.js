@@ -63,11 +63,22 @@ function some(predicate, theArray) {
 }
 
 function indexOf(item, theArray) {
-
+  if (theArray.length === 0) {
+      return -1;
+    }
+  for (var i = 0; i < theArray.length; i ++) {
+   
+    if (item === theArray[i]) {
+      return i;
+    }
+  }
+    if (item != theArray[i]) {
+      return -1;
+    }
 }
 
 function findIndex(predicate, theArray) {
-
+  
 }
 
 function first(n, theArray) {
